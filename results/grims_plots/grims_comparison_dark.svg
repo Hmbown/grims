@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="560" viewBox="0 0 840 560">
+  <rect width="840" height="560" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf3">Two Methods, Two Answers</text>
+  <text x="40" y="76" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8b949e">The fast search looks precise. The audited search reveals the true uncertainty.</text>
+
+  <!-- Horizontal rule -->
+  <line x1="40" y1="100" x2="800" y2="100" stroke="#21262d" stroke-width="1"/>
+
+  <!-- KAPPA AXIS -->
+  <text x="40" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#484f58" letter-spacing="0.5">KAPPA →</text>
+
+  <!-- Axis line -->
+  <line x1="40" y1="460" x2="780" y2="460" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Tick marks and labels -->
+  <line x1="40" y1="456" x2="40" y2="464" stroke="#30363d" stroke-width="1"/>
+  <text x="40" y="480" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#484f58" text-anchor="middle">0</text>
+
+  <line x1="188" y1="456" x2="188" y2="464" stroke="#30363d" stroke-width="1"/>
+  <text x="188" y="480" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#484f58" text-anchor="middle">1</text>
+
+  <line x1="336" y1="456" x2="336" y2="464" stroke="#30363d" stroke-width="1"/>
+  <text x="336" y="480" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#484f58" text-anchor="middle">2</text>
+
+  <line x1="484" y1="456" x2="484" y2="464" stroke="#30363d" stroke-width="1"/>
+  <text x="484" y="480" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#484f58" text-anchor="middle">3</text>
+
+  <line x1="632" y1="456" x2="632" y2="464" stroke="#30363d" stroke-width="1"/>
+  <text x="632" y="480" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#484f58" text-anchor="middle">4</text>
+
+  <line x1="780" y1="456" x2="780" y2="464" stroke="#30363d" stroke-width="1"/>
+  <text x="780" y="480" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#484f58" text-anchor="middle">5</text>
+
+  <!-- GR prediction line at kappa=1 (x=188) -->
+  <line x1="188" y1="130" x2="188" y2="460" stroke="#30363d" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="196" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#484f58">GR prediction</text>
+  <text x="196" y="162" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#484f58">(kappa ~ 1)</text>
+
+  <!-- METHOD 1: Fast phase-locked stack -->
+  <text x="40" y="200" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#e6edf3">Fast phase-locked stack</text>
+  <text x="40" y="220" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">23 events · fixed amplitudes · assumes no fitting bias</text>
+
+  <!-- 95% CI [0.032, 0.318], mean 0.175 -->
+  <line x1="45" y1="260" x2="87" y2="260" stroke="#3fb950" stroke-width="4" stroke-linecap="round"/>
+  <line x1="45" y1="248" x2="45" y2="272" stroke="#3fb950" stroke-width="2"/>
+  <line x1="87" y1="248" x2="87" y2="272" stroke="#3fb950" stroke-width="2"/>
+  <circle cx="66" cy="260" r="5" fill="#3fb950"/>
+
+  <text x="100" y="255" font-family="'SF Mono', 'Fira Code', Menlo, Consolas, monospace" font-size="16" font-weight="600" fill="#3fb950">kappa = 0.175 ± 0.073</text>
+  <text x="100" y="275" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">SNR 4.2 · looks clean, but overconfident</text>
+
+  <!-- METHOD 2: Audited profile likelihood -->
+  <text x="40" y="340" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#e6edf3">Audited profile likelihood</text>
+  <text x="40" y="360" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">5 events · amplitudes re-fit per kappa · corrects the bias</text>
+
+  <!-- 90% CI [0.16, 4.63], MAP 0.60 -->
+  <line x1="64" y1="400" x2="725" y2="400" stroke="#f85149" stroke-width="4" stroke-linecap="round"/>
+  <line x1="64" y1="388" x2="64" y2="412" stroke="#f85149" stroke-width="2"/>
+  <line x1="725" y1="388" x2="725" y2="412" stroke="#f85149" stroke-width="2"/>
+  <circle cx="129" cy="400" r="5" fill="#f85149"/>
+
+  <text x="142" y="395" font-family="'SF Mono', 'Fira Code', Menlo, Consolas, monospace" font-size="16" font-weight="600" fill="#f85149">MAP = 0.60 · 90% CI [0.16, 4.63]</text>
+  <text x="142" y="415" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">broad · honest · both kappa=0 and kappa~1 allowed</text>
+
+  <!-- Horizontal rule -->
+  <line x1="40" y1="500" x2="800" y2="500" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Bottom takeaway -->
+  <text x="40" y="530" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#c9d1d9">The fast method found a signal. The audited method found that the signal's uncertainty is large.</text>
+  <text x="40" y="550" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#c9d1d9">Neither proves nor rules out the GR prediction. More data needed.</text>
+</svg>

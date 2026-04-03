@@ -1,0 +1,39 @@
+{
+  "seg001": {
+    "n_bins": 18,
+    "n_A": 17,
+    "n_B": 1,
+    "n_C": 0,
+    "n_D": 0,
+    "median_excess": 1.1937813300368094,
+    "median_allan_ratio": 1.0872885132223529,
+    "min_scatter_ppm": 489.9585536422246,
+    "max_scatter_ppm": 1007.90540210012
+  },
+  "seg002": {
+    "n_bins": 18,
+    "n_A": 0,
+    "n_B": 10,
+    "n_C": 8,
+    "n_D": 0,
+    "median_excess": 4.888443301429367,
+    "median_allan_ratio": 3.356751194588682,
+    "min_scatter_ppm": 2048.9696710117355,
+    "max_scatter_ppm": 2802.5818113360906
+  },
+  "confounds": {
+    "seg001_precedes_seg002": true,
+    "gap_minutes": 1.0677069844678044,
+    "flux_ratio_seg002_over_seg001": 0.9818372553954542,
+    "seg001_in_transit_fraction": 0.4967741935483871,
+    "seg002_in_transit_fraction": 0.5225806451612903,
+    "seg001_nan_count": 4650,
+    "seg002_nan_count": 4650
+  },
+  "ratios": {
+    "excess_ratio_repro": 4.094923566344128,
+    "allan_ratio_repro": 3.0872681480285435,
+    "excess_ratio_ref": 4.21,
+    "allan_ratio_ref": 2.77
+  }
+}

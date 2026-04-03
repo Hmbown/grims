@@ -1,0 +1,188 @@
+{
+  "manifest_version": "1.0",
+  "created": "2026-04-03",
+  "description": "Reproducible data manifest for CHIME JWST channel diagnostics",
+  "notes": "Pin observation IDs, filenames, and MAST URIs so any future analysis can fetch the same data without rediscovery.",
+
+  "completed_surveys": {
+    "phase2_g395h": {
+      "description": "Segment-level noise heterogeneity survey (FINDING.md)",
+      "targets": [
+        {
+          "target": "WASP-39",
+          "program": 1366,
+          "observation": 3,
+          "obs_id": "jw01366-o003_t001_nirspec_f290lp-g395h-s1600a1-sub2048",
+          "grating": "G395H",
+          "segments": [
+            {
+              "segment": 1,
+              "filename": "jw01366003001_04101_00001-seg001_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01366003001_04101_00001-seg001_nrs1_x1dints.fits",
+              "size_bytes": 27720000,
+              "quality_grade": "A (17/18 bins)",
+              "systematic_excess": 1.19
+            },
+            {
+              "segment": 2,
+              "filename": "jw01366003001_04101_00001-seg002_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01366003001_04101_00001-seg002_nrs1_x1dints.fits",
+              "size_bytes": 27720000,
+              "quality_grade": "B-C (0/18 A-grade)",
+              "systematic_excess": 4.89
+            },
+            {
+              "segment": 3,
+              "filename": "jw01366003001_04101_00001-seg003_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01366003001_04101_00001-seg003_nrs1_x1dints.fits",
+              "size_bytes": 27720000,
+              "quality_grade": "A-B (12/18 A-grade)",
+              "systematic_excess": 1.62
+            }
+          ]
+        },
+        {
+          "target": "WASP-39",
+          "program": 1366,
+          "observation": 4,
+          "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+          "grating": "PRISM",
+          "segments": [
+            {
+              "segment": 1,
+              "filename": "jw01366004001_04101_00001-seg001_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01366004001_04101_00001-seg001_nrs1_x1dints.fits",
+              "size_bytes": 327294720,
+              "quality_grade": "A (19/19 bins)",
+              "systematic_excess": 1.25
+            },
+            {
+              "segment": 2,
+              "filename": "jw01366004001_04101_00001-seg002_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01366004001_04101_00001-seg002_nrs1_x1dints.fits",
+              "size_bytes": 327294720,
+              "quality_grade": "B (0/19 A-grade)",
+              "systematic_excess": 3.77
+            },
+            {
+              "segment": 3,
+              "filename": "jw01366004001_04101_00001-seg003_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01366004001_04101_00001-seg003_nrs1_x1dints.fits",
+              "size_bytes": 324264960,
+              "quality_grade": "A-B (17/19 A-grade)",
+              "systematic_excess": 1.85
+            },
+            {
+              "segment": 4,
+              "filename": "jw01366004001_04101_00001-seg004_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01366004001_04101_00001-seg004_nrs1_x1dints.fits",
+              "size_bytes": 324264960,
+              "quality_grade": "A (19/19 bins)",
+              "systematic_excess": 1.22
+            }
+          ]
+        },
+        {
+          "target": "WASP-107",
+          "program": 1224,
+          "observation": 3,
+          "obs_id": "jw01224-o003_t003_nirspec_f290lp-g395h-s1600a1-sub2048",
+          "grating": "G395H",
+          "segments": [
+            {
+              "segment": 1,
+              "filename": "jw01224003001_04102_00001-seg001_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01224003001_04102_00001-seg001_nrs1_x1dints.fits",
+              "size_bytes": null,
+              "quality_grade": "A (18/18 bins)",
+              "systematic_excess": 1.40
+            },
+            {
+              "segment": 2,
+              "filename": "jw01224003001_04102_00001-seg002_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01224003001_04102_00001-seg002_nrs1_x1dints.fits",
+              "size_bytes": null,
+              "quality_grade": "A (13/18 A-grade)",
+              "systematic_excess": 1.36
+            },
+            {
+              "segment": 3,
+              "filename": "jw01224003001_04102_00001-seg003_nrs1_x1dints.fits",
+              "uri": "mast:JWST/product/jw01224003001_04102_00001-seg003_nrs1_x1dints.fits",
+              "size_bytes": null,
+              "quality_grade": "A (15/18 A-grade)",
+              "systematic_excess": 1.28
+            }
+          ]
+        }
+      ]
+    },
+    "expanded_grating_comparison": {
+      "description": "G395H vs G395M cross-grating comparison",
+      "targets": [
+        {
+          "target": "WASP-107",
+          "program": 1201,
+          "observation": 502,
+          "obs_id": "jw01201-o502_t006_nirspec_f290lp-g395m-s1600a1-sub2048",
+          "grating": "G395M",
+          "quality_grade": "A (19/19 bins)",
+          "systematic_excess": 1.49
+        }
+      ]
+    }
+  },
+
+  "next_campaign": {
+    "description": "Follow-up targets for segment heterogeneity investigation (SHA-4152)",
+    "priority_targets": [
+      {
+        "target": "HD-189733",
+        "rationale": "Bright host, extensive NIRSpec coverage, many programs to sample grating/segment behavior",
+        "ephemeris_ref": "ephemeris.py: period=2.21857567d, t0=2454279.436714 BJD (Agol+ 2010; Fu+ 2024)"
+      },
+      {
+        "target": "TRAPPIST-1",
+        "rationale": "Multiple planets, many transit observations, different detector subarray modes",
+        "ephemeris_ref": "ephemeris.py: TRAPPIST-1b period=1.51087081d (Agol+ 2021)"
+      },
+      {
+        "target": "WASP-121",
+        "rationale": "Hot Jupiter, G395H coverage expected, tests segment effect at different brightness",
+        "ephemeris_ref": "ephemeris.py: period=1.2749255d, t0=2457043.8249 BJD (Delrez+ 2016)"
+      },
+      {
+        "target": "GJ-3470",
+        "rationale": "Sub-Neptune around M-dwarf, different stellar SED tests detector systematics",
+        "ephemeris_ref": "ephemeris.py: period=3.336652d, t0=2456043.8930 BJD (Dragomir+ 2019)"
+      }
+    ],
+    "search_criteria": {
+      "instrument": "NIRSPEC",
+      "grating": ["G395H", "G395M", "PRISM"],
+      "data_rights": "PUBLIC",
+      "calib_level_min": 2,
+      "product_subgroup": "X1DINTS"
+    },
+    "notes": "Use chime.mast.find_x1dints(target) to discover available observations. Priority is targets with G395H data to test whether segment heterogeneity is target-independent."
+  },
+
+  "ephemeris_sources": {
+    "primary": "chime/src/chime/ephemeris.py (27 systems, 30 entries with planet variants)",
+    "upstream": "NASA Exoplanet Archive (https://exoplanetarchive.ipac.caltech.edu)",
+    "update_procedure": "Manually update EPHEMERIDES dict in ephemeris.py from NASA Exoplanet Archive composite table"
+  },
+
+  "cache_locations": {
+    "x1dints_downloads": "Temporary dirs (tempfile.mkdtemp(prefix='chime_')), not persistent by default",
+    "persistent_cache": "Set download_dir parameter in chime.mast.download_product() to persist downloads",
+    "recommended_cache_dir": "chime/data/ (create if needed, add *.fits to .gitignore)",
+    "results": "chime/results/channel_survey/ (checked in, ~1MB total)"
+  },
+
+  "fetch_commands": {
+    "search_target": "python -c \"from chime.mast import find_x1dints; print(find_x1dints('WASP-39'))\"",
+    "run_survey": "python chime/examples/multi_target_survey.py",
+    "check_ephemeris": "python -c \"from chime.ephemeris import list_targets; print(list_targets())\""
+  }
+}

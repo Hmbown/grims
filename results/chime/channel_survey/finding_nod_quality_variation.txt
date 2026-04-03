@@ -1,0 +1,68 @@
+
+==========================================================================
+  chime — KEY FINDING: Intra-visit channel quality variation in NIRSpec
+==========================================================================
+
+OBSERVATION
+  WASP-39b NIRSpec G395H (ERS Program 1366)
+  Two consecutive nod segments of the SAME observation, SAME wavelength
+  range (2.86-3.72 µm), taken minutes apart:
+
+  Segment 1 (seg001): 155 integrations, 2.7 hours
+    13/19 bins A-grade (photon-limited)
+    Median systematic excess: 1.17× photon noise
+    Median Allan deviation ratio: 1.21
+    Trust region: entire 2.86-3.72 µm band
+
+  Segment 2 (seg002): 155 integrations, 2.7 hours
+    0/19 bins A-grade, 7/19 C-grade (significant systematics)
+    Median systematic excess: 4.92× photon noise  (4.2× WORSE)
+    Median Allan deviation ratio: 3.35  (2.8× WORSE)
+    Trust regions: NONE
+
+COMPARISON TARGET
+  WASP-107b NIRSpec G395H (Program 1224): 411 integrations, 6.5 hours
+    14/19 bins A-grade
+    Median systematic excess: 1.36×
+    Median Allan deviation ratio: 1.10
+    Trust region: entire 2.86-3.72 µm band
+
+WHY THIS MATTERS
+  1. The channel quality of NIRSpec G395H data varies by >4× between
+     nod positions within a single visit. This means that treating all
+     nod segments equally (as standard pipelines do) degrades the
+     combined spectrum by mixing photon-limited data with
+     systematic-contaminated data.
+
+  2. chime's automatic quality grading identifies this WITHOUT knowing
+     the nod position a priori — it measures the empirical noise
+     properties of each segment independently.
+
+  3. The Allan deviation diagnostic (does noise average down as sqrt(n)?)
+     provides information beyond simple scatter: segment 2 has correlated
+     noise that does NOT improve with averaging (ratio 3.35 vs ideal 1.0),
+     while segment 1 averages down correctly (ratio 1.21).
+
+  4. PRACTICAL IMPLICATION: For WASP-39b G395H, using only segment 1
+     and discarding segment 2 would produce a BETTER transmission
+     spectrum than combining both segments with equal weight.
+     Diversity combining (inverse-variance weighting per channel)
+     automatically achieves this.
+
+  5. The WASP-107b observation (different target, different program)
+     shows that G395H CAN be uniformly photon-limited — the segment 2
+     degradation in WASP-39 is not an instrument limitation, it's a
+     specific detector/pointing effect in that nod position.
+
+METHOD
+  chime measures three independent diagnostics per wavelength bin:
+  - Empirical scatter (MAD-based robust sigma of out-of-transit flux)
+  - Photon noise reference (from pipeline flux errors)
+  - Allan deviation (block-average convergence test)
+
+  These combine into a single quality grade (A/B/C/D) that determines
+  the diversity combining weight. D-grade channels get zero weight.
+
+REFERENCE
+  Based on Bown's sub-band diversity combining (US 1,747,221, 1930):
+  split the band, measure each channel independently, weight by quality.

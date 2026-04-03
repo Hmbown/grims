@@ -1,0 +1,100 @@
+{
+  "finding": "Intra-exposure channel quality variation in JWST NIRSpec G395H",
+  "version": "chime 0.1.0",
+  "date": "2026-04-02",
+  "measurements": [
+    {
+      "target": "WASP-39b",
+      "program": 1366,
+      "observation": 3,
+      "file": "jw01366003001_04101_00001-seg001_nrs1_x1dints.fits",
+      "segment": 1,
+      "n_integrations": 155,
+      "wavelength_range_um": [
+        2.86,
+        3.72
+      ],
+      "grating": "G395H",
+      "detector": "NRS1",
+      "n_bins": 19,
+      "n_A_grade": 13,
+      "n_B_grade": 6,
+      "n_C_grade": 0,
+      "n_D_grade": 0,
+      "median_systematic_excess": 1.17,
+      "median_allan_ratio": 1.21,
+      "min_scatter_ppm": 507,
+      "max_scatter_ppm": 930,
+      "trust_coverage_um": 0.86,
+      "assessment": "photon-limited"
+    },
+    {
+      "target": "WASP-39b",
+      "program": 1366,
+      "observation": 3,
+      "file": "jw01366003001_04101_00001-seg002_nrs1_x1dints.fits",
+      "segment": 2,
+      "n_integrations": 155,
+      "wavelength_range_um": [
+        2.86,
+        3.72
+      ],
+      "grating": "G395H",
+      "detector": "NRS1",
+      "n_bins": 19,
+      "n_A_grade": 0,
+      "n_B_grade": 12,
+      "n_C_grade": 7,
+      "n_D_grade": 0,
+      "median_systematic_excess": 4.92,
+      "median_allan_ratio": 3.35,
+      "min_scatter_ppm": 2116,
+      "max_scatter_ppm": 2823,
+      "trust_coverage_um": 0.0,
+      "assessment": "systematic-dominated"
+    },
+    {
+      "target": "WASP-107b",
+      "program": 1224,
+      "observation": 3,
+      "file": "jw01224-o003_t003_nirspec_f290lp-g395h-s1600a1-sub2048_x1dints.fits",
+      "segment": "combined",
+      "n_integrations": 411,
+      "wavelength_range_um": [
+        2.86,
+        3.72
+      ],
+      "grating": "G395H",
+      "detector": "NRS1",
+      "n_bins": 19,
+      "n_A_grade": 14,
+      "n_B_grade": 5,
+      "n_C_grade": 0,
+      "n_D_grade": 0,
+      "median_systematic_excess": 1.36,
+      "median_allan_ratio": 1.1,
+      "min_scatter_ppm": 541,
+      "max_scatter_ppm": 846,
+      "trust_coverage_um": 0.86,
+      "assessment": "photon-limited"
+    }
+  ],
+  "key_comparison": {
+    "seg1_vs_seg2_excess_ratio": 4.21,
+    "seg1_vs_seg2_allan_ratio": 2.77,
+    "seg1_vs_seg2_scatter_ratio": 3.03,
+    "same_target": true,
+    "same_detector": true,
+    "same_grating": true,
+    "same_night": true,
+    "same_pointing": true,
+    "time_between_segments_hours": 2.7
+  },
+  "references": {
+    "wasp39_ers": "Alderson et al. 2023, Nature 614, 664",
+    "wasp107": "Dyrek et al. 2024, Nature 625, 51",
+    "nirspec_commissioning": "Espinoza et al. 2023, PASP 135, 018002",
+    "jwst_compass": "arXiv:2511.18196 (2025)",
+    "bown_diversity": "US Patent 1,747,221 (1930)"
+  }
+}

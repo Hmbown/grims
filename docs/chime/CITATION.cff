@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+title: "chime: Channel Quality and Instrument Metrology for Exoplanets"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Bown
+    given-names: Hunter
+    email: "hunter@shannonlabs.dev"
+repository-code: "https://github.com/Hmbown/bownpower"
+license: MIT
+version: 0.1.0
+date-released: "2025-04-01"
+keywords:
+  - jwst
+  - exoplanet
+  - transit spectroscopy
+  - channel quality
+  - noise diagnostics
+  - NIRSpec
+abstract: >-
+  chime is a diagnostic package for JWST transit spectroscopy that
+  measures per-wavelength, per-segment empirical noise quality in
+  reduced time-series products. It computes systematic excess, Allan
+  deviation diagnostics, and quality grades for each wavelength bin,
+  and provides quality-weighted combining inspired by Bown's sub-band
+  diversity engineering methods (US 1,747,221, 1930).
+references:
+  - type: article
+    title: "A Comprehensive Transmission Spectrum of WASP-39b with JWST"
+    authors:
+      - family-names: Alderson
+        given-names: L.
+      - family-names: Wakeford
+        given-names: H. R.
+    journal: "Nature"
+    volume: 614
+    start: 664
+    year: 2023
+    doi: "10.1038/s41586-022-05674-1"
+  - type: article
+    title: "Early Release Science of the exoplanet WASP-39b with JWST NIRSpec G395H"
+    authors:
+      - family-names: Rustamkulov
+        given-names: Z.
+    journal: "Nature"
+    volume: 614
+    start: 659
+    year: 2023
+    doi: "10.1038/s41586-022-05677-y"
+  - type: article
+    title: "JWST COMPASS: NIRSpec/G395H Transmission Spectroscopy"
+    authors:
+      - family-names: Gordon
+        given-names: T.
+    year: 2025
+    url: "https://arxiv.org/abs/2511.18196"

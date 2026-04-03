@@ -1,0 +1,31 @@
+{
+  "n_events": 122,
+  "kappa_weighted_mean": 0.0283878371781069,
+  "kappa_mean_sigma": 0.019040014679379314,
+  "significance_sigma": 1.4909566854930763,
+  "chi2_vs_mean": 128.81114867397758,
+  "chi2_per_dof_vs_mean": 1.064554947718823,
+  "chi2_vs_nr": 128.31210577018888,
+  "chi2_per_dof_vs_nr": 1.0604306261999081,
+  "ndof": 121,
+  "correlation_kappa_mass": {
+    "r": -0.12321054888660264,
+    "p": 0.17635841290978996
+  },
+  "correlation_kappa_spin": {
+    "r": 0.0006882625208310867,
+    "p": 0.9939968943088707
+  },
+  "correlation_kappa_snr": {
+    "r": -0.10959211823640197,
+    "p": 0.2295005679557873
+  },
+  "correlation_residual_mass": {
+    "r": -0.12321588416991004,
+    "p": 0.1763395417242059
+  },
+  "correlation_residual_snr": {
+    "r": -0.10960148790512009,
+    "p": 0.22946050779491933
+  }
+}

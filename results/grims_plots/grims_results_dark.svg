@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="420" viewBox="0 0 840 420">
+  <rect width="840" height="420" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="40" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf3">What GRIM-S Found</text>
+
+  <!-- Two-column results -->
+  <!-- Left column: Fast stack -->
+  <text x="40" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#e6edf3" letter-spacing="0.5">FAST PHASE-LOCKED STACK</text>
+  <text x="40" y="130" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">23 events from GWTC-1 through GWTC-3</text>
+
+  <text x="40" y="168" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace" font-size="22" fill="#e6edf3" font-weight="600">kappa = 0.175 +/- 0.073</text>
+  <text x="40" y="198" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace" font-size="18" fill="#8b949e">Combined SNR = 4.2</text>
+
+  <!-- Vertical divider -->
+  <line x1="420" y1="90" x2="420" y2="220" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Right column: Audited -->
+  <text x="460" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#e6edf3" letter-spacing="0.5">AUDITED PROFILE LIKELIHOOD</text>
+  <text x="460" y="130" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#8b949e">5-event audited subset</text>
+
+  <text x="460" y="168" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace" font-size="22" fill="#e6edf3" font-weight="600">MAP kappa = 0.60</text>
+  <text x="460" y="198" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace" font-size="18" fill="#8b949e">90% CI [0.16, 4.63]</text>
+
+  <!-- Horizontal divider -->
+  <line x1="40" y1="240" x2="800" y2="240" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Honest reading -->
+  <text x="40" y="278" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#e6edf3" letter-spacing="0.5">HONEST READING</text>
+
+  <text x="40" y="310" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#c9d1d9">Suggestive pattern at the expected nonlinear frequency.</text>
+  <text x="40" y="334" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#c9d1d9">After auditing dominant systematics, current public data are too weak</text>
+  <text x="40" y="358" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#c9d1d9">for a clean detection claim, a sharp GR test, or a publishable measurement.</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="385" x2="800" y2="385" stroke="#21262d" stroke-width="1"/>
+  <text x="40" y="410" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#484f58">An open personal research instrument with interesting exploratory results, not a settled scientific claim.</text>
+</svg>

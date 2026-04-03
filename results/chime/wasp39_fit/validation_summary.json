@@ -1,0 +1,64 @@
+{
+  "title": "chime transit_fit validation: WASP-39b synthetic transmission spectrum",
+  "pipeline": "chime v0.1.0 (transit_fit module)",
+  "method": "Mandel & Agol (2002) analytic transit model + RBF GP systematics + diversity combining",
+  "target": "WASP-39b (synthetic, based on Rustamkulov+ 2023)",
+  "observation": {
+    "n_integrations": 2880,
+    "cadence_seconds": 10,
+    "baseline_hours": 8.0,
+    "n_in_transit": 1130,
+    "n_out_of_transit": 1750,
+    "wavelength_range_um": [
+      0.6,
+      5.3
+    ],
+    "n_wavelength_bins": 28
+  },
+  "noise_model": {
+    "per_integration_ppm": "600-2500 (wavelength-dependent)",
+    "ramp_percent": "0.3-2.0 (wavelength-dependent, linear)"
+  },
+  "recovery": {
+    "n_active_bins": 23,
+    "median_depth_error_pct": 0.2,
+    "mean_depth_error_pct": 0.6,
+    "within_1sigma": 8,
+    "within_2sigma": 12,
+    "within_3sigma": 16,
+    "chi2_reduced_median": 1.0
+  },
+  "features_detected": [
+    {
+      "molecule": "H2O",
+      "wavelength_um": 1.4,
+      "excess_ppm": 739,
+      "error_ppm": 20,
+      "sigma": 36.8,
+      "recovery_pct": 108
+    },
+    {
+      "molecule": "H2O",
+      "wavelength_um": 2.7,
+      "excess_ppm": 862,
+      "error_ppm": 28,
+      "sigma": 30.9,
+      "recovery_pct": 101
+    },
+    {
+      "molecule": "H2O",
+      "wavelength_um": 1.15,
+      "excess_ppm": -52,
+      "error_ppm": 35,
+      "sigma": 1.5,
+      "note": "feature below noise floor"
+    }
+  ],
+  "diversity_combining": {
+    "weighted_depth_ppm": 21266,
+    "naive_depth_ppm": 21190,
+    "expected_depth_ppm": 21316,
+    "improvement_factor": 1.78,
+    "weighted_error_pct": 0.2
+  }
+}

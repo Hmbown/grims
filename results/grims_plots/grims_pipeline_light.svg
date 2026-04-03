@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="480" viewBox="0 0 840 480">
+  <rect width="840" height="480" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="40" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#111111">How GRIM-S Works</text>
+
+  <!-- Pipeline boxes -->
+  <!-- Input -->
+  <rect x="40" y="90" width="170" height="80" rx="4" fill="none" stroke="#c0c0c0" stroke-width="1.5"/>
+  <text x="125" y="120" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#111111">Input</text>
+  <text x="125" y="142" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#555555">GWTC catalog</text>
+  <text x="125" y="158" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#555555">GWOSC strain files</text>
+
+  <!-- Arrow 1 -->
+  <line x1="220" y1="130" x2="250" y2="130" stroke="#999999" stroke-width="1.5"/>
+  <polygon points="250,126 258,130 250,134" fill="#999999"/>
+
+  <!-- Condition -->
+  <rect x="268" y="90" width="170" height="80" rx="4" fill="none" stroke="#c0c0c0" stroke-width="1.5"/>
+  <text x="353" y="120" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#111111">Condition</text>
+  <text x="353" y="142" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#555555">Estimate ASD, whiten,</text>
+  <text x="353" y="158" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#555555">bandpass to QNM band</text>
+
+  <!-- Arrow 2 -->
+  <line x1="448" y1="130" x2="478" y2="130" stroke="#999999" stroke-width="1.5"/>
+  <polygon points="478,126 486,130 478,134" fill="#999999"/>
+
+  <!-- Search -->
+  <rect x="496" y="90" width="170" height="80" rx="4" fill="none" stroke="#c0c0c0" stroke-width="1.5"/>
+  <text x="581" y="120" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#111111">Search</text>
+  <text x="581" y="142" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#555555">Fit parent mode, lock</text>
+  <text x="581" y="158" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#555555">daughter template, estimate kappa</text>
+
+  <!-- Arrow 3 -->
+  <line x1="676" y1="130" x2="706" y2="130" stroke="#999999" stroke-width="1.5"/>
+  <polygon points="706,126 714,130 706,134" fill="#999999"/>
+
+  <!-- Stack -->
+  <rect x="724" y="90" width="80" height="80" rx="4" fill="none" stroke="#c0c0c0" stroke-width="1.5"/>
+  <text x="764" y="136" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#111111">Stack</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="205" x2="800" y2="205" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Key simplification -->
+  <text x="40" y="246" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#111111" letter-spacing="0.5">KEY SIMPLIFICATION</text>
+  <text x="40" y="270" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#555555">The nonlinear daughter mode is not searched freely. It is locked to the parent.</text>
+
+  <!-- Equations -->
+  <text x="80" y="316" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace" font-size="20" fill="#111111" font-weight="500">omega_NL  =  2 * omega_220</text>
+  <text x="80" y="348" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace" font-size="20" fill="#111111" font-weight="500">gamma_NL  =  2 * gamma_220</text>
+  <text x="80" y="380" font-family="'SF Mono', 'Fira Code', 'Cascadia Code', Menlo, Consolas, monospace" font-size="20" fill="#111111" font-weight="500">A_NL      =  kappa * A_220^2</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="410" x2="800" y2="410" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Why stack -->
+  <text x="40" y="445" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#111111" letter-spacing="0.5">WHY STACK MANY EVENTS</text>
+  <text x="40" y="469" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#555555">No single merger is loud enough. Combine weak measurements across events to build sensitivity.</text>
+</svg>

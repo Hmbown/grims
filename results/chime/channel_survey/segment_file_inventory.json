@@ -1,0 +1,116 @@
+{
+  "program_1366_segments": [
+    {
+      "filename": "jw01366003001_04101_00001-seg003_nrs1_x1dints.png",
+      "obs_id": "jw01366-o003_t001_nirspec_f290lp-g395h-s1600a1-sub2048",
+      "calib_level": 2,
+      "size": 105940.0,
+      "uri": "mast:JWST/product/jw01366003001_04101_00001-seg003_nrs1_x1dints.png",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366003001_04101_00001-seg003_nrs1_x1dints.fits",
+      "obs_id": "jw01366-o003_t001_nirspec_f290lp-g395h-s1600a1-sub2048",
+      "calib_level": 2,
+      "size": 27720000.0,
+      "uri": "mast:JWST/product/jw01366003001_04101_00001-seg003_nrs1_x1dints.fits",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366003001_04101_00001-seg001_nrs1_x1dints.png",
+      "obs_id": "jw01366-o003_t001_nirspec_f290lp-g395h-s1600a1-sub2048",
+      "calib_level": 2,
+      "size": 105506.0,
+      "uri": "mast:JWST/product/jw01366003001_04101_00001-seg001_nrs1_x1dints.png",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366003001_04101_00001-seg001_nrs1_x1dints.fits",
+      "obs_id": "jw01366-o003_t001_nirspec_f290lp-g395h-s1600a1-sub2048",
+      "calib_level": 2,
+      "size": 27720000.0,
+      "uri": "mast:JWST/product/jw01366003001_04101_00001-seg001_nrs1_x1dints.fits",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366003001_04101_00001-seg002_nrs1_x1dints.png",
+      "obs_id": "jw01366-o003_t001_nirspec_f290lp-g395h-s1600a1-sub2048",
+      "calib_level": 2,
+      "size": 106409.0,
+      "uri": "mast:JWST/product/jw01366003001_04101_00001-seg002_nrs1_x1dints.png",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366003001_04101_00001-seg002_nrs1_x1dints.fits",
+      "obs_id": "jw01366-o003_t001_nirspec_f290lp-g395h-s1600a1-sub2048",
+      "calib_level": 2,
+      "size": 27720000.0,
+      "uri": "mast:JWST/product/jw01366003001_04101_00001-seg002_nrs1_x1dints.fits",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg004_nrs1_x1dints.png",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 76354.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg004_nrs1_x1dints.png",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg004_nrs1_x1dints.fits",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 324264960.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg004_nrs1_x1dints.fits",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg003_nrs1_x1dints.png",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 70797.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg003_nrs1_x1dints.png",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg003_nrs1_x1dints.fits",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 324264960.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg003_nrs1_x1dints.fits",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg002_nrs1_x1dints.png",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 76637.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg002_nrs1_x1dints.png",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg002_nrs1_x1dints.fits",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 327294720.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg002_nrs1_x1dints.fits",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg001_nrs1_x1dints.png",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 70541.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg001_nrs1_x1dints.png",
+      "target": "WASP-39"
+    },
+    {
+      "filename": "jw01366004001_04101_00001-seg001_nrs1_x1dints.fits",
+      "obs_id": "jw01366-o004_t001_nirspec_clear-prism-s1600a1-sub512",
+      "calib_level": 2,
+      "size": 327294720.0,
+      "uri": "mast:JWST/product/jw01366004001_04101_00001-seg001_nrs1_x1dints.fits",
+      "target": "WASP-39"
+    }
+  ]
+}
