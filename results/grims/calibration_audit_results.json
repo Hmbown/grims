@@ -1,0 +1,87 @@
+{
+  "verdict": "DO NOT USE calibrated constraint",
+  "reason": "Estimator bias too large: recovery slope b1=0.284 (recovers only 28% of kappa_true). Sigma rescaling alone cannot produce a valid constraint on kappa_true.",
+  "stacked_result": {
+    "kappa_hat": 0.0014963809104389773,
+    "kappa_sigma": 0.05711853092344203,
+    "n_events": 135
+  },
+  "calibration_analysis": {
+    "sigma_inflation_factor": 2.8285636554902767,
+    "recovery_slope_b1": 0.2841226327527334,
+    "recovery_slope_b1_err": 0.07082932417796226,
+    "recovery_slope_b1_95ci": [
+      0.14134140423058145,
+      0.4202169529064844
+    ],
+    "mean_pull_std": 0.39625038462172923
+  },
+  "constraints": {
+    "uncalibrated_95_upper_kappa_hat": 0.11344870152038536,
+    "naive_calibrated_95_upper_kappa_hat": 0.045857531011425375,
+    "proper_calibrated_95_upper_kappa_true": 0.14617253691283452,
+    "conservative_95_upper_kappa_true": 0.4008974347388419
+  },
+  "gr_consistency": {
+    "kappa_gr_prediction": 0.0321225,
+    "z_score": 0.5361853429075457,
+    "p_value": 0.5918304623069395
+  },
+  "best_publishable_headline": "kappa = +0.0015 \u00b1 0.0571 (135 BBH events, consistent with GR at 0.5\u03c3)",
+  "per_scenario_pulls": {
+    "fixed_tstart_5M": {
+      "mean_pull_std": 1.2814387708116515,
+      "mean_recovery": 0.6910398619679287,
+      "mean_coverage_68": 0.45,
+      "mean_coverage_90": 0.6833333333333333
+    },
+    "fixed_tstart_8M": {
+      "mean_pull_std": 1.4561648553989446,
+      "mean_recovery": 0.27207198804619936,
+      "mean_coverage_68": 0.4166666666666667,
+      "mean_coverage_90": 0.5833333333333333
+    },
+    "fixed_tstart_10M": {
+      "mean_pull_std": 1.2849289857426356,
+      "mean_recovery": 0.4011996452488943,
+      "mean_coverage_68": 0.35,
+      "mean_coverage_90": 0.6
+    },
+    "fixed_tstart_12M": {
+      "mean_pull_std": 1.16883833901006,
+      "mean_recovery": 0.24566303810828857,
+      "mean_coverage_68": 0.33333333333333337,
+      "mean_coverage_90": 0.6166666666666666
+    },
+    "fixed_tstart_15M": {
+      "mean_pull_std": 1.5341384726342937,
+      "mean_recovery": -0.036133691551352584,
+      "mean_coverage_68": 0.4833333333333334,
+      "mean_coverage_90": 0.6833333333333333
+    },
+    "fixed_tstart_20M": {
+      "mean_pull_std": 1.6118970767280998,
+      "mean_recovery": 0.3862555534471169,
+      "mean_coverage_68": 0.4333333333333334,
+      "mean_coverage_90": 0.6333333333333334
+    },
+    "marginalized_default": {
+      "mean_pull_std": 0.39625038462172923,
+      "mean_recovery": 0.2629439680641954,
+      "mean_coverage_68": 0.4666666666666667,
+      "mean_coverage_90": 0.85
+    },
+    "marginalized_tight": {
+      "mean_pull_std": 0.3562370565131069,
+      "mean_recovery": 0.3063174056101157,
+      "mean_coverage_68": 0.4666666666666667,
+      "mean_coverage_90": 0.8333333333333333
+    },
+    "marginalized_wide": {
+      "mean_pull_std": 0.4221929546461185,
+      "mean_recovery": 0.2526950100042855,
+      "mean_coverage_68": 0.5333333333333334,
+      "mean_coverage_90": 0.8666666666666666
+    }
+  }
+}
