@@ -33,6 +33,8 @@ def find_local_strain_detector(
     event: dict, data_dir: str = "data/", detector_prefix: str = "H1"
 ) -> str | None:
     """Find a locally cached strain file for an event and specific detector."""
+    from .gwtc_pipeline import is_valid_hdf5_file
+
     data_path = Path(data_dir)
     gps = int(event.get("gps", 0))
     if gps == 0:
@@ -52,7 +54,8 @@ def find_local_strain_detector(
                 file_gps = int(parts[-2])
                 file_dur = int(parts[-1])
                 if file_gps <= gps <= file_gps + file_dur:
-                    return str(f)
+                    if is_valid_hdf5_file(f):
+                        return str(f)
             except ValueError:
                 continue
     return None

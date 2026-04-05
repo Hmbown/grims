@@ -11,8 +11,11 @@ References:
   - Mitman et al., PRL 130, 081402 (2023)
 """
 
+import os
+import tempfile
 import warnings
 from dataclasses import dataclass
+from pathlib import Path
 
 import numpy as np
 
@@ -22,6 +25,14 @@ warnings.filterwarnings(
     category=np.exceptions.VisibleDeprecationWarning,
     module=r"qnm\b",
 )
+
+# Numba's default cache locator can fail for this qnm install on Python 3.14.
+# Point it at a writable directory before importing qnm so the package loads
+# cleanly in tests and scripts.
+if "NUMBA_CACHE_DIR" not in os.environ:
+    numba_cache_dir = Path(tempfile.gettempdir()) / "bown_instruments_numba_cache"
+    numba_cache_dir.mkdir(parents=True, exist_ok=True)
+    os.environ["NUMBA_CACHE_DIR"] = str(numba_cache_dir)
 
 import qnm
 

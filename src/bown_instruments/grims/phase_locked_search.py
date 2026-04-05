@@ -145,9 +145,7 @@ def build_phase_locked_template(
     phi_nl = 2.0 * phi_220
 
     template[mask] = (
-        a_nl
-        * np.exp(omega_nl.imag * t[mask])
-        * np.cos(omega_nl.real * t[mask] + phi_nl)
+        a_nl * np.exp(omega_nl.imag * t[mask]) * np.cos(omega_nl.real * t[mask] + phi_nl)
     )
 
     return template
@@ -351,7 +349,9 @@ def phase_locked_search_colored(
 
 
 def stack_phase_locked(
-    results: list, max_weight_ratio: float | None = None
+    results: list,
+    max_weight_ratio: float | None = None,
+    force_equal_weights: bool = False,
 ) -> StackedPhaseLockResult:
     """Stack phase-locked search results across events.
 
@@ -373,6 +373,9 @@ def stack_phase_locked(
         concentration without biasing kappa when the underlying
         signal is constant across events. Standard technique in
         meta-analysis (Cochrane Handbook, §10.10.4.1).
+    force_equal_weights : bool, optional
+        If True, ignore individual uncertainties and use equal weights
+        for all events. Used for robustness testing.
     """
     if not results:
         raise ValueError("No results to stack")
@@ -384,7 +387,10 @@ def stack_phase_locked(
 
     for r in results:
         if r.kappa_sigma > 0 and np.isfinite(r.kappa_sigma):
-            w = 1.0 / r.kappa_sigma**2
+            if force_equal_weights:
+                w = 1.0
+            else:
+                w = 1.0 / r.kappa_sigma**2
             weights.append(w)
             kappas.append(r.kappa_hat)
             snr_sq_sum += r.snr**2
@@ -403,12 +409,12 @@ def stack_phase_locked(
     weights = np.array(weights)
     kappas = np.array(kappas)
 
-    # Apply weight cap if requested
-    if max_weight_ratio is not None and max_weight_ratio > 0:
-        n = len(weights)
-        w_avg = np.sum(weights) / n
-        w_cap = max_weight_ratio * w_avg
-        weights = np.minimum(weights, w_cap)
+    if not force_equal_weights:
+        if max_weight_ratio is not None and max_weight_ratio > 0:
+            n = len(weights)
+            w_avg = np.sum(weights) / n
+            w_cap = max_weight_ratio * w_avg
+            weights = np.minimum(weights, w_cap)
 
     total_weight = np.sum(weights)
     kappa_combined = np.sum(weights * kappas) / total_weight

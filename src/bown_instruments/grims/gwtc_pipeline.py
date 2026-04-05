@@ -24,6 +24,24 @@ from scipy.signal import welch
 
 M_SUN_SECONDS = 4.925491025543576e-06
 
+
+def is_valid_hdf5_file(path: str | Path) -> bool:
+    """Return True when a path exists and has a readable HDF5 signature."""
+    candidate = Path(path)
+    if not candidate.is_file():
+        return False
+
+    try:
+        if candidate.stat().st_size == 0:
+            return False
+    except OSError:
+        return False
+
+    try:
+        return bool(h5py.is_hdf5(str(candidate)))
+    except (OSError, ValueError):
+        return False
+
 # GWOSC event API endpoints for the curated ringdown set. These are kept
 # explicit rather than discovered dynamically so the ingest path stays
 # deterministic and auditable.
@@ -463,11 +481,21 @@ def download_gwosc_strain(event_name: str, detector: str | None = "H1",
 
     remote = matches[0]
     local_file = data_path / Path(remote["url"]).name
-    if local_file.exists():
+    if is_valid_hdf5_file(local_file):
         return str(local_file), remote["detector"]
+    if local_file.exists():
+        local_file.unlink()
 
-    with urllib.request.urlopen(remote["url"]) as response, local_file.open("wb") as handle:
+    partial_file = local_file.with_name(f"{local_file.name}.partial")
+    if partial_file.exists():
+        partial_file.unlink()
+
+    with urllib.request.urlopen(remote["url"]) as response, partial_file.open("wb") as handle:
         handle.write(response.read())
+    if not is_valid_hdf5_file(partial_file):
+        partial_file.unlink(missing_ok=True)
+        raise OSError(f"Downloaded invalid HDF5 strain file from {remote['url']}")
+    partial_file.replace(local_file)
     return str(local_file), remote["detector"]
 
 
